@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="it">
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
 <link rel="manifest" href="./assets/icons/site.webmanifest">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,6 +38,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <!-- translate -->
+    <script>
+        $(document).ready(function () {
+
+            $('#button-eng').click(function () {
+                $('#header-servizi').text("OUR SERVICES");
+                $('#servizio1').text("Ceremony on site");
+                $('#servizio2').text("Symbolic rite");
+                $('#servizio3').text("Rooms for overnight stay");
+                $('#servizio4').text("Baby-sitter");
+                $('#servizio5').text("Live music and DJ set");
+                $('#servizio6').text("Costomized menu");
+                $('#servizio7').text("Photo book");
+                $('#servizio8').text("Flower arrangement");
+                $('#citazione').text("Those who want to do great things must think deeply about the details.");
+                $('#chisiamo').text("About us");
+                $('#web-about-us').text("About us");
+                $('#services').text("Services");
+                $('#web-services').text("Services");
+                $('#contact').text("Contact us");
+                $('#web-contact-us').text("Contact us");
+                $('#location-title').text("Location");
+                $('#location-des').text("I paesaggi più belli");
+                $('#food-title').text("Cucina");
+                $('#food-des').text("Tutti a tavola.");
+                $('#services-title').text("Servizi");
+                $('#services-des').text("Di tutto di più");
+                
+                $('#location-title').text("Location");
+                $('#location-des').text("The most beautiful scenery");
+                $('#food-title').text("Cuisine");
+                $('#food-des').text("Take your seat.");
+                $('#services-title').text("Services");
+                $('#services-des').text("Everything that you need");
+                $('#scopri-food').text("Learn more");
+                $('#scopri-loc').text("Learn more");
+                $('#scopri-ser').text("Learn more");
+
+            });
+            $('#button-ita').click(function () {
+                $('#header-servizi').text("SERVIZI OFFERTI");
+                $('#servizio1').text("Cerimonia in loco");
+                $('#servizio2').text("Rito simbolico");
+                $('#servizio3').text("Pernottamento");
+                $('#servizio4').text("Baby-sitter");
+                $('#servizio5').text("Musica dal vivo e DJ set");
+                $('#servizio6').text("Menu personalizzato");
+                $('#servizio7').text("Book fotografico");
+                $('#servizio8').text("Allestimento floreale");
+                $('#citazione').text("Chi vuole fare grandi cose deve pensare profondamente ai dettagli.");
+                $('#chisiamo').text("Chi siamo");
+                $('#web-about-us').text("Chi siamo");
+                $('#services').text("Servizi");
+                $('#web-services').text("Servizi");
+                $('#contact').text("Contattaci");
+                $('#web-contact-us').text("Contattaci");
+                $('#location-title').text("Location");
+                $('#location-des').text("I paesaggi più belli");
+                $('#food-title').text("Cucina");
+                $('#food-des').text("Tutti a tavola.");
+                $('#services-title').text("Servizi");
+                $('#services-des').text("Di tutto di più");
+                $('#scopri-food').text("Scopri di più");
+                $('#scopri-loc').text("Scopri di più");
+                $('#scopri-ser').text("Scopri di più");
+
+
+            });
+        });
+    </script>
     <title>Pugliamoci</title>
   </head>
   <body>
@@ -62,26 +134,27 @@
               class="dropdown-menu mobile-menu dropdown-menu-right"
               aria-labelledby="dropdownMenuButton"
             >
-              <a class="dropdown-item" href="#about-us">Chi siamo</a>
-              <a class="dropdown-item" href="#services">Servizi</a>
-              <a class="dropdown-item" href="contact-us.html">Contattaci</a>
+              <a class="dropdown-item" href="#about-us"><span id="chisiamo">Chi siamo</span></a>
+              <a class="dropdown-item" href="#services"><span id="services">Servizi</span></a>
+              <a class="dropdown-item" href="contact-us.html" id="contact">Contattaci</a>
             </div>
           </div>
           <ul class="nav-list">
             <li>
-              <a href="#about-us">Chi siamo</a>
+              <a href="#about-us" id="web-about-us">Chi siamo</a>
             </li>
             <li>
-              <a href="#services">Servizi</a>
+              <a href="#services" id="web-services">Servizi</a>
             </li>
             <li>
-              <a href="contact-us.html">Contattaci</a>
+              <a href="contact-us.html" id="web-contact-us">Contattaci</a>
             </li>
           </ul>
         </nav>
       </div>
     </div>
-
+    <button id="button-eng" type="button" class="btn btn-light btn-sm">ENG</button>
+    <button id="button-ita" type="button" class="btn btn-light btn-sm">ITA</button>
         
         <!-- carousel -->
         
@@ -109,9 +182,11 @@
                 alt="First slide"
               />
               <div class="carousel-caption d-md-block img-fluid">
-                <h5>Location</h5>
-                <p>I paesaggi più belli</p>
-                <button class="btn carousel-btn">Scopri di più</button>
+                <h5 id="location-title">Location</h5>
+                <p id="location-des">I paesaggi più belli</p>
+                <button class="btn custom-btn">
+                    <a href="#gallery" id="scopri-loc">Scopri di più</a>
+                    </button>
               </div>
             </div>
             <div class="carousel-item">
@@ -121,10 +196,10 @@
                 alt="Second slide"
               />
               <div class="carousel-caption d-md-block">
-                <h5>Cucina</h5>
-                <p>Tutti a tavola.</p>
-                <button class="btn carousel-btn">
-                  <a href="#food">Scopri di più</a>
+                <h5 id="food-title">Cucina</h5>
+                <p id="food-des">Tutti a tavola.</p>
+                <button class="btn custom-btn">
+                  <a href="#food" id="scopri-food">Scopri di più</a>
                 </button>
               </div>
             </div>
@@ -135,10 +210,10 @@
                 alt="Third slide"
               />
               <div class="carousel-caption d-md-block">
-                <h5>Servizi</h5>
-                <p>Di tutto di più</p>
-                <button class="btn carousel-btn">
-                  <a href="#services">Scopri di più</a>
+                <h5 id="services-title">Servizi</h5>
+                <p id="services-des">Di tutto di più</p>
+                <button class="btn custom-btn">
+                  <a href="#services" id="scopri-ser">Scopri di più</a>
                 </button>
               </div>
             </div>
@@ -165,49 +240,54 @@
       </div>
     <!-- servizi-->
     <div id="services">
-      <img
-        src="./assets/images/servizi.jpeg"
-        alt="servizi"
-        class="container-image-servizi"
-      />
-      <br />
-      <div class="container text-center">
-        <div class="row justify-content-center">
-          <h2>SERVIZI OFFERTI</h2>
+        <img src="./assets/images/servizi.jpeg" alt="servizi" class="container-image-servizi"> <br>
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <h2 id="header-servizi">SERVIZI OFFERTI</h2>
+            </div>
         </div>
-      </div>
-      <div class="container text-center">
-        <div class="row justify-content-between my-5">
-          <div class="col">
-            Cerimonia in loco <br />
-            Rito simbolico <br />
-            Pernottamento <br />
-            Baby-sitter <br />
-          </div>
-          <div class="col">
-            Musica dal vivo e DJ set <br />
-            Menu personalizzato <br />
-            Book fotografico <br />
-            Allestimento floreale <br />
-          </div>
+        <div class="container text-left">
+            <div class="row justify-content-between">
+    
+                <div class="col">
+    
+                </div>
+    
+                <div class="col">
+                    <i class="fa fa-diamond"><span class="ml-2" id="servizio1">Cerimonia in loco</span></i><br>
+                    <i class="fa fa-venus-mars"><span class="ml-2" id="servizio2">Rito simbolico </span></i><br>
+                    <i class="fa fa-bed"><span class="ml-2" id="servizio3">Pernottamento</span></i><br>
+                    <i class="fa fa-child"><span class="ml-2" id="servizio4">Baby-sitter </span></i><br>
+                </div>
+    
+                <div class="col">
+    
+                </div>
+    
+                <div class="col">
+                    <i class="fa fa-music"><span class="ml-2" id="servizio5">Musica dal vivo e DJ set </span></i><br>
+                    <i class="fa fa-glass"><span class="ml-2" id="servizio6">Menu personalizzato</span></i><br>
+                    <i class="fa fa-video-camera"><span class="ml-2" id="servizio7">Book fotografico</span></i><br>
+                    <i class="fa fa-pagelines"><span class="ml-2" id="servizio8">Allestimento floreale </span></i><br>
+                </div>
+    
+                <div class="col">
+    
+                </div>
+            </div>
         </div>
-      </div>
-      <br />
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"
-      ></script>
-      <figure class="text-center">
-        <blockquote class="blockquote">
-          <p class="quote">
-            Chi vuole fare grandi cose deve pensare profondamente ai dettagli.
-          </p>
-        </blockquote>
-        <figcaption class="blockquote-footer">
-          Paul Valéry <cite title="Source Title"></cite>
-        </figcaption>
-      </figure>
+        <br>
+    
+        <figure class="text-center">
+            <blockquote class="blockquote">
+                <p class="quote"><span id="citazione">Chi vuole fare grandi cose deve pensare profondamente ai
+                        dettagli.</span></p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                Paul Valéry <cite title="Source Title"></cite>
+            </figcaption>
+        </figure>
+    
     </div>
 
     <!-- food section -->
@@ -249,6 +329,37 @@
         </div>
       </div>
     </div>
+<!-- gallery -->
+<div class="row" id="gallery">
+     
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      
+          <img class="assests-images" src="./assets/images/masseria.jpeg" alt="masseria">
+        
+   </div>
+  <div class="col-md-4 col-sm-6 col-xs-12">
+      
+        <img class="assests-images" src="./assets/images/night.jpeg" alt="nightvuew">
+     
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <img class="assests-images" src="./assets/images/bride.jpeg" alt="nightvuew">
+    </div>
+  </div>
+  <div class="row">
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+          <img class="assests-images" src="./assets/images/tablefood.jpg" alt="kaktus">
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+          <img class="assests-images" src="./assets/images/lakeview.jpeg" alt="kaktus">
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+          <img class="assests-images" src="./assets/images/table.jpeg" alt="kaktus">
+      </div>
+  
+
+</div>
 
     <!-- about us -->
     <div class="container text-center my-5" id="about-us">
@@ -343,5 +454,43 @@
         </div>
 
         </div>
+
+        <footer class="footer">
+            <div class="row footer-container px-5">
+                <div class="col">
+                    <img class="footer-logo" src="./assets/images/PugliadAmare.png"
+                            alt="PugliaDaMare">
+                        </div>
+                <div class="col mt-5">
+                    <p class="footer-support-text">Perchè chi si somiglia...si Puglia</p>
+                    <p> <small class="footer-support-text-owned">PugliadAmare Logo is owned by www.pugliadamare.it</p></small>
+                    <small class="copyright">
+                        &copy 2023 PugliadAmare
+                    </small>
+                </div>
+                <div class="col">
+                    <h2 class="small-footer-header">Contatti</h2>
+                    <p class="footer-support-text">
+                    <p>Via Puglia Women Lead, 3</p>
+                    <p>70100 - Monopoli (BA)</p>                
+                    <p> +39 349 99 99 999</p>                
+                    <p>pugliamare@wedding.com</p>
+                    </p>
+    
+                </div>
+                <div class="col">
+                    <h2 class="small-footer-header">Menù</h2>
+                    <p class="footer-support-text">
+                      <a class="footer-link" href="https://learn.freecodecamp.org/" target="_blank" rel="noopener noreferrer">Chi siamo</a>
+                    </p>
+                    <p class="footer-support-text">
+                      <a class="footer-link" href="https://www.freecodecamp.org/news" target="_blank" rel="noopener noreferrer">Servizi</a>
+                    </p>
+                    <p class="footer-support-text">
+                      <a class="footer-link" href="https://www.freecodecamp.org/forum/" target="_blank" rel="noopener noreferrer">Galleria</a>
+                    </p>
+                </div>
+                </div>
+        </footer>
   </body>
 </html>

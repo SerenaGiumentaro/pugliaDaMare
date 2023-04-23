@@ -6,6 +6,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+<link rel="manifest" href="./assets/icons/site.webmanifest">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -50,44 +55,134 @@
 
       </div>
 
+<div class="col">
 
-      <form>
-        <div class="col text-left">
+    <form>
+      <div class="col text-left">
 
 
 
-          <div class="form-group">
-            <input type="name" id="name" name="name" placeholder="Il tuo nome"><br><br>
-          </div>
-          <div class="form-group">
+        <div class="form-group">
+          <input type="name" id="name" name="name" placeholder="Il tuo nome"><br><br>
+        </div>
+        <div class="form-group">
 
-            <input type="phone" id="phone" name="phone" placeholder="Il tuo numero di telefono"><br><br>
-          </div>
+          <input type="phone" id="phone" name="phone" placeholder="Il tuo numero di telefono"><br><br>
+        </div>
 
-          <div class="form-group">
-            <input type="email" id="email" name="email" placeholder="Il tuo indirizzo email"><br><br>
-          </div>
-          <div class="form-group">
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Il tuo indirizzo email"><br><br>
+        </div>
+        <div class="form-group">
 
-            <input type="checkbox" id="privacy" name="privacy" value=""> <label for="privacy"> <a
-                href="https://www.terminiecondizioni.com/">Dichiaro di aver preso visione dell'informativa sulla privacy
-              </a></label><br><br>
-
-          </div>
-
-          <div class="form-group">
-
-            <input type="checkbox" id="consenso" name="consenso" value=""> <label for="privacy"> <a
-                href="https://www.terminiecondizioni.com/">Presto il consenso al trattamento dei miei dati
-                personali.</a></label><br><br>
-
-          </div>
-          <div style="text-align:right">
-            <button type="submit" class="btn custom-btn">Invia ora</button>
-          </div>
+          <input type="checkbox" id="privacy" name="privacy" value=""> <label for="privacy"> <a
+              href="privacy-policy.html">Dichiaro di aver preso visione dell'informativa sulla privacy
+            </a></label><br><br>
 
         </div>
-      </form>
+
+        <div class="form-group">
+
+          <input type="checkbox" id="consenso" name="consenso" value=""> <label for="privacy"> <a
+              href="trattamento-dati.html">Presto il consenso al trattamento dei miei dati
+              personali.</a></label><br><br>
+
+        </div>
+
+
+      </div>
+    </form>
+        <!--Trigger button modal-->
+        <button type="submit" id="modale-button" class="btn custom-btn" data-toggle="modal"
+        data-target="#popup">Invia
+        ora</button>
+    </div>
+</div>
+
+      <!--Modal-->
+      <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="modalCentreTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centred" role="document">
+          <div class="modal-content">
+            <div class="modale-header">
+              <h4 class="modal-title" id="popup-header">Grazie <span id="nome-utente">
+                </span>per averci contattato!
+              </h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="modal-body-text">Ciao! Ti ricontatteremo al più presto. Nel frattempo dai un'occhiata alla nostra
+                brochure che abbiamo iviato al tuo indirizzo email 
+                <strong><span id="email-utente"></span></strong>. Se non la trovi controlla anche tra gli spam ;)
+              </p>
+            </div>
+            <div class="modall-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer mt-5">
+        <div class="row footer-container px-5">
+            <div class="col">
+                <img class="footer-logo" src="./assets/images/PugliadAmare.png"
+                        alt="PugliaDaMare">
+                    </div>
+            <div class="col mt-5">
+                <p class="footer-support-text">Perchè chi si somiglia...si Puglia</p>
+                <p> <small class="footer-support-text-owned">PugliadAmare Logo is owned by www.pugliadamare.it</p></small>
+                <small class="copyright">
+                    &copy 2023 PugliadAmare
+                </small>
+            </div>
+            <div class="col">
+                <h2 class="small-footer-header">Contatti</h2>
+                <p class="footer-support-text">
+                <p>Via Puglia Women Lead, 3</p>
+                <p>70100 - Monopoli (BA)</p>                
+                <p> +39 349 99 99 999</p>                
+                <p>pugliamare@wedding.com</p>
+                </p>
+
+            </div>
+            <div class="col">
+                <h2 class="small-footer-header">Menù</h2>
+                <p class="footer-support-text">
+                  <a class="footer-link" href="https://learn.freecodecamp.org/" target="_blank" rel="noopener noreferrer">Chi siamo</a>
+                </p>
+                <p class="footer-support-text">
+                  <a class="footer-link" href="https://www.freecodecamp.org/news" target="_blank" rel="noopener noreferrer">Servizi</a>
+                </p>
+                <p class="footer-support-text">
+                  <a class="footer-link" href="https://www.freecodecamp.org/forum/" target="_blank" rel="noopener noreferrer">Galleria</a>
+                </p>
+            </div>
+            </div>
+    </footer>
+
+      <script>
+        $(document).ready(function () {
+          $('input[id="name"]').on('input', function () {
+            var nome = $('#name').val();
+            console.log(nome);
+            $('#nome-utente').text(nome + ' ');
+          });
+        });
+      </script>
+      <script>
+        $(document).ready(function () {
+          $('input[id="email"]').on('input', function () {
+            var email = $('#email').val();
+            console.log(email);
+            $('#email-utente').text(email + ' ');
+          });
+        });
+      </script>
+
+
 </body>
 
 </html>
